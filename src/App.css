@@ -1,0 +1,162 @@
+:root {
+    --primary-color: #17a2b8;
+    --dark-color: #343a40;
+    --light-color: #f4f4f4;
+    --danger-color: #dc3545;
+    --success-color: #28a745;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    background-color: #eceff1;
+    color: #333;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+.landing {
+    max-width: 1400px;
+    margin: 20px auto;
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.sidebar {
+    width: 30%;
+    min-width: 250px;
+    background-color: white;
+}
+
+.sidebar-header {
+    height: 50px;
+    background-color: #37474f;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.search {
+    padding: 5px 10px;
+    margin: 0 auto;
+}
+
+.search input {
+    width: 100%;
+    padding: 5px 10px;
+    margin: 0 auto;
+}
+
+.user-list {
+    margin-top: 50px;
+    height: auto;
+}
+
+.user-item {
+    height: 80px;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: #cfd8dc;
+}
+
+.user-item img {
+    width: 70px;
+    border-radius: 50%;
+}
+
+.main {
+    width: 70%;
+}
+
+.user-head {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #37474f;
+    color: white;
+}
+
+.user-head img {
+    padding: 30px;
+    width: 250px;
+    border-radius: 50%;
+}
+
+.user-info {
+    padding: 20px 50px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.page-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+}
+
+@media only screen and (max-width: 768px) {
+    .user-info {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .user-head {
+        flex-direction: column;
+    }
+
+    .landing {
+        flex-direction: column-reverse;
+    }
+
+    .main, .sidebar {
+        width: 100%;
+    }
+
+    .user-list {
+        margin-top: 20px;
+        height: auto;
+    }
+}
